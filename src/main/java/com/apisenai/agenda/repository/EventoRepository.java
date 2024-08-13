@@ -1,5 +1,9 @@
 package com.apisenai.agenda.repository;
 
-public interface EventoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.apisenai.agenda.classes.Evento;
+
+public interface EventoRepository extends JpaRepository<Evento, Long> {
 
 }
