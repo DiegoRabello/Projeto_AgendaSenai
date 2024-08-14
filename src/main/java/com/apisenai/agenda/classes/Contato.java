@@ -17,11 +17,10 @@ public class Contato {
     private Long id;
     
     @Column(name = "nome", nullable = false)
-    @NotBlank(message = "Nome do contato obrigatório")
+    
     private String nome;
 
     @Column(name = "email", nullable = false, unique = true)
-    @Email(message = "Email inválido")
-    @NotBlank(message = "Email do contato obrigatório")
+    
     private String email;
 }
