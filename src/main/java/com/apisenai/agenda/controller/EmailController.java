@@ -9,7 +9,7 @@ import com.apisenai.agenda.service.EmailService;
 public class EmailController {
  @Autowired
     private EmailService emailService;
-
+    
     @GetMapping("/send-email")
     public String sendEmail(@RequestParam String to, @RequestParam String subject, @RequestParam String text) {
         emailService.sendEmail(to, subject, text);

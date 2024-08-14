@@ -13,10 +13,15 @@ import com.apisenai.agenda.classes.Contato;
 
 @Service
 public class ContatoService {
-
+    @Autowired
+    private EmailService emailService;
     @Autowired
     private ContatoRepository contatoRepository;
-
+//diego dps dá um push blz :)
+    public void sendEmailNotification (Contato contato) {
+        
+        
+    }
     public List<Contato> getAll(){
         return contatoRepository.findAll();
     }

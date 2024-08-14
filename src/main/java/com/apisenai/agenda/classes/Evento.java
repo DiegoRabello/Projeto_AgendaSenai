@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 import java.util.List;
-import jakarta.validation.constraints.*;
 
 @Data
 @EqualsAndHashCode(of = "id")
@@ -18,7 +17,7 @@ public class Evento {
 
     @ManyToOne
     @JoinColumn(name = "contatos", referencedColumnName = "id")
-    private List<Contato> contatos;
+    private List<Contato> convidados;
 
     @Column(name = "nome_do_evento", nullable = false)
     private String nome;

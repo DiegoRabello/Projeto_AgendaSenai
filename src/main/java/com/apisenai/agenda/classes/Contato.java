@@ -3,7 +3,6 @@ package com.apisenai.agenda.classes;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import jakarta.validation.constraints.*;
 
 @Entity
 @EqualsAndHashCode(of = "id")

@@ -15,6 +15,7 @@ public class ContatoController {
     @Autowired
     private ContatoService contatoService;
 
+    
     @GetMapping
     public ResponseEntity<List<Contato>> getAll() {
         List<Contato> contatos = contatoService.getAll();
