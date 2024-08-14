@@ -17,10 +17,11 @@ public class ContatoService {
     private EmailService emailService;
     @Autowired
     private ContatoRepository contatoRepository;
-//diego dps dá um push blz :)
+
     public void sendEmailNotification (Contato contato) {
-        
-        
+        String subject = "Bem Vindo!" ;
+        String texto= "Você foi cadastrado com sucesso!";
+        emailService.sendEmail(contato.getEmail(), subject, texto);
     }
     public List<Contato> getAll(){
         return contatoRepository.findAll();
@@ -36,6 +37,7 @@ public class ContatoService {
 
     public Contato create(Contato contato){
         Contato contatoSalvo = contatoRepository.save(contato);
+        sendEmailNotification(contatoSalvo);
         return contatoSalvo;
     }
     

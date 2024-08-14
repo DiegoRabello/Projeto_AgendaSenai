@@ -31,4 +31,11 @@ public class Evento {
     @Column(name = "data_hora_fim")
     private LocalDateTime dataHoraFim;
 
+    public void addConvidado(Contato contato) {
+        this.convidados.add(contato);
+    }
+
+    public void removeConvidado(Contato contato) {
+        this.convidados.remove(contato);
+    }
 }
