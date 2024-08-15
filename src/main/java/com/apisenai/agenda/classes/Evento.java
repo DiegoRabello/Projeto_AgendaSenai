@@ -15,9 +15,9 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "contatos", referencedColumnName = "id")
-    private List<Contato> convidados;
+    @ManyToMany
+    @JoinTable(name = "evento_convite", joinColumns = @JoinColumn(name = "evento_id"), inverseJoinColumns = @JoinColumn(name = "contato_id"))
+    private List<Contato> contatos;
 
     @Column(name = "nome_do_evento", nullable = false)
     private String nome;
@@ -31,11 +31,4 @@ public class Evento {
     @Column(name = "data_hora_fim")
     private LocalDateTime dataHoraFim;
 
-    public void addConvidado(Contato contato) {
-        this.convidados.add(contato);
-    }
-
-    public void removeConvidado(Contato contato) {
-        this.convidados.remove(contato);
-    }
 }

@@ -17,4 +17,6 @@ public interface EventoRepository extends JpaRepository<Evento, Long> {
     Optional<List<Evento>> findByDataHoraFimLessThanEqual(LocalDateTime dataHora);
 
     Optional<List<Evento>> findByDataHoraInicioGreaterThanEqual(LocalDateTime dataHora);
+
+    List<Evento> findByDataHoraInicioBetween(LocalDateTime inicio, LocalDateTime fim);
 }

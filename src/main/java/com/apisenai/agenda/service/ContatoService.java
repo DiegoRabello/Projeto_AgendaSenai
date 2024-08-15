@@ -73,8 +73,7 @@ public class ContatoService {
         contatoDto.setNome(contatoSalvo.getNome());
         contatoDto.setEmail(contatoSalvo.getEmail());
 
-        return contatoDto; 
-
+        return contatoDto;
     }
 
     public List<ContatoDto> getContatosDto(){ 

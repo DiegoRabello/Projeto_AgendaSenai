@@ -60,4 +60,8 @@ public class EventoService {
         eventoRepository.delete(evento);
         return evento;
     }
+
+    public List<Evento> getEventsByData(LocalDateTime data) {
+        return eventoRepository.findByDataHoraInicioBetween(data.minusMinutes(1), data.plusMinutes(1));
+    }
 }
