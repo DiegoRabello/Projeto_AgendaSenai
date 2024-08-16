@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import jakarta.annotation.ManagedBean;
 @Configuration
 public class SwaggerConfig {
 
@@ -30,6 +31,13 @@ public class SwaggerConfig {
         return GroupedOpenApi.builder()
                 .group("eventos")
                 .pathsToMatch("/evento/**")
+                .build();
+    }
+    @Bean
+    public GroupedOpenApi ConviteApi() {
+        return GroupedOpenApi.builder()
+                .group("convite")
+                .pathsToMatch("/convite/**")
                 .build();
     }
 }

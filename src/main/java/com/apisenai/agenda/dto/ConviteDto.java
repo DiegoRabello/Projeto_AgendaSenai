@@ -5,7 +5,7 @@ public class ConviteDto {
     private Long id;
     private String descricao;
     private Long convidadoId;
-    private String dataEvento;
+   
 
     // Getters e Setters
     public Long getId() {
@@ -30,13 +30,5 @@ public class ConviteDto {
 
     public void setConvidadoId(Long convidadoId) {
         this.convidadoId = convidadoId;
-    }
-
-    public String getDataEvento() {
-        return dataEvento;
-    }
-
-    public void setDataEvento(String dataEvento) {
-        this.dataEvento = dataEvento;
     }
 }

@@ -15,10 +15,6 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToMany
-    @JoinTable(name = "evento_convite", joinColumns = @JoinColumn(name = "evento_id"), inverseJoinColumns = @JoinColumn(name = "contato_id"))
-    private List<Contato> contatos;
-
     @Column(name = "nome_do_evento", nullable = false)
     private String nome;
 

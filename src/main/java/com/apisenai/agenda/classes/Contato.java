@@ -17,12 +17,8 @@ public class Contato {
     private Long id;
 
     @Column(name = "nome", nullable = false)
-
     private String nome;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-
-    @ManyToMany(mappedBy = "contatos")
-    private List<Evento> eventos;
 }

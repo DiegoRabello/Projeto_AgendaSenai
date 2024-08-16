@@ -23,10 +23,9 @@ public class LembreteService {
     private ConviteService conviteService;
 
     // Verifica os eventos a cada hora
-    @Scheduled(fixedRate = 360000) // 3600000 milissegundos = 1 hora
+    @Scheduled(fixedRate = 60000) // 3600000 milissegundos = 1 hora
     public void enviarLembretes() {
 
-        emailService.sendEmail("rabellodiego4677@gmail.com", "evento", "aviso");
         LocalDateTime agora = LocalDateTime.now();
         LocalDateTime umDiaAntes = agora.plusDays(1);
         LocalDateTime umaHoraAntes = agora.plusHours(1);
